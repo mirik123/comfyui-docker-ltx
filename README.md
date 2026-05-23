@@ -70,3 +70,9 @@ USE_SAGE_ATTENTION=true
 ```
 
 The start script only passes `--use-sage-attention` if `import sageattention` works.
+
+### Building docker container
+- `sed -i -e 's/\r$//' start.sh`
+- `docker build --no-cache -t runpod-comfyui-wan .`
+- `docker tag runpod-comfyui-wan repository/runpod-comfyui-wan`
+- `docker push repository/runpod-comfyui-wan`
